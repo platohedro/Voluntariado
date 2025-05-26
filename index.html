@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Voluntariado - Platohedro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #ffffff; /* Blanco */
+            color: #000000; /* Negro */
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom-width: 4px;
+            border-color: transparent;
+        }
+        .tab-button.active {
+            border-color: #5dc1b9; /* Azul 1 */
+            color: #000000; /* Negro */
+            font-weight: 600;
+        }
+        .tab-button:hover {
+            background-color: #8fe8e0; /* Azul 2 */
+        }
+        .accordion-header {
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: #8fe8e0; /* Azul 2 */
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .accordion-content.open {
+            max-height: 1500px; /* Adjust as needed for content */
+            padding-top: 1rem; /* py-4 */
+            padding-bottom: 1rem; /* py-4 */
+        }
+        .card {
+            background-color: #8fe8e0; /* Azul 2 */
+            border-left-width: 4px;
+            border-color: #5dc1b9; /* Azul 1 */
+        }
+        .step-item {
+            border-color: #5dc1b9; /* Azul 1 */
+        }
+        .step-item.active .step-circle {
+            background-color: #5dc1b9; /* Azul 1 */
+            color: white;
+        }
+        .step-item.active .step-title {
+            color: #000000; /* Negro */
+            font-weight: 600;
+        }
+        .step-circle {
+            background-color: #8fe8e0; /* Azul 2 */
+            color: #000000; /* Negro */
+        }
+    </style>
+</head>
+<body class="text-black">
+
+    <header class="bg-[#5dc1b9] shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <h1 class="text-3xl font-bold text-white text-center">✨ Política de Voluntariado Platohedro ✨</h1>
+        </div>
+        <nav class="bg-[#8fe8e0] shadow-sm">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-2 sm:space-x-4">
+                <button class="tab-button active py-3 px-3 sm:px-6 text-sm sm:text-base font-medium text-black" data-tab="inicio">🏠 Inicio</button>
+                <button class="tab-button py-3 px-3 sm:px-6 text-sm sm:text-base font-medium text-black" data-tab="politica">📜 Política</button>
+                <button class="tab-button py-3 px-3 sm:px-6 text-sm sm:text-base font-medium text-black" data-tab="proceso">🔄 Proceso</button>
+                <button class="tab-button py-3 px-3 sm:px-6 text-sm sm:text-base font-medium text-black" data-tab="participa">🤝 Participa</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <section id="inicio" class="tab-content">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-[#5dc1b9] mb-4">Bienvenido/a al Corazón de Platohedro</h2>
+                <p class="mb-4 text-lg">
+                    Platohedro es una plataforma creativa colaborativa que vibra con la experimentación artística, la cultura libre y las pedagogías alternativas. Nuestro voluntariado es una pieza clave para tejer el #BuenVivir y el #BuenConocer.
+                </p>
+                <p class="mb-4">
+                    Esta política interactiva es tu guía para comprender cómo puedes sumar tu energía, talento y tiempo a nuestra misión. Aquí encontrarás los principios que nos mueven, los objetivos que perseguimos juntos, y cómo es el camino de un voluntario en Platohedro, desde la bienvenida hasta el reconocimiento de tu invaluable aporte.
+                </p>
+                <p class="font-medium text-[#5dc1b9]">
+                    ¡Explora, aprende y prepárate para ser parte de una comunidad que construye un futuro más colaborativo y consciente!
+                </p>
+            </div>
+        </section>
+
+        <section id="politica" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-[#5dc1b9] mb-6 text-center">📜 Política de Acción del Voluntariado</h2>
+                <p class="text-center mb-6">Nuestra política establece los cimientos para una colaboración fructífera y alineada con nuestros valores, buscando una experiencia enriquecedora para todos.</p>
+
+                <div class="space-y-4">
+                    <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>🎯 Propósito y Marco Legal</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <h4 class="font-semibold mt-2">Propósito</h4>
+                            <p>Establecer los principios, objetivos y directrices que rigen la vinculación, participación y gestión de los voluntarios, garantizando una experiencia enriquecedora, alineada con la misión y visión de la organización, y en cumplimiento del marco legal vigente. Buscamos fomentar un ambiente colaborativo, de aprendizaje mutuo y de contribución significativa al bienestar común.</p>
+                            <h4 class="font-semibold mt-3">Marco Legal ⚖️</h4>
+                            <p>El voluntariado en Platohedro se enmarca en la <strong><a href="https://www.unidadsolidaria.gov.co/sites/default/files/archivos/Ley%20720%20de%202001.pdf" target="_blank" rel="noopener noreferrer" class="text-[#5dc1b9] hover:text-black underline">Ley 720 del 2001 de Colombia</a></strong>, que define al voluntario como "toda persona natural que libre y responsablemente, sin recibir remuneración de carácter laboral, ofrece, tiempo, trabajo y talento para la construcción del bien común".</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>✨ Principios Rectores y Objetivos</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <h4 class="font-semibold mt-2">Principios Rectores</h4>
+                            <ul class="list-disc list-inside space-y-1 mt-1">
+                                <li><strong>Colaboración y Participación:</strong> Valoramos la inteligencia colectiva. 💡🤝</li>
+                                <li><strong>Respeto y Equidad:</strong> Promovemos un ambiente de inclusión. 🌈⚖️</li>
+                                <li><strong>Aprendizaje y Experimentación:</strong> Fomentamos el #BuenConocer. 🧠🔬</li>
+                                <li><strong>Compromiso con el #BuenVivir:</strong> Orientamos acciones a la justicia. 🕊️❤️</li>
+                                <li><strong>Autonomía y Responsabilidad:</strong> Reconocemos la proactividad. 💪🌟</li>
+                                <li><strong>Transparencia y Comunicación:</strong> Mantenemos un diálogo abierto. 🗣️✅</li>
+                            </ul>
+                            <h4 class="font-semibold mt-3">Objetivos del Voluntariado 🏆</h4>
+                             <ul class="list-disc list-inside space-y-1 mt-1">
+                                <li>Fortalecer la capacidad operativa. 🛠️🚀</li>
+                                <li>Enriquecer la perspectiva con nuevas ideas. 🌟💡</li>
+                                <li>Promover el #BuenConocer y el intercambio de saberes. 📚🌱</li>
+                                <li>Fomentar el #BuenVivir involucrando a la comunidad. 🏡💖</li>
+                                <li>Crear comunidad y sentido de pertenencia. 🫂🌐</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>🧑‍🤝‍🧑 Roles y Responsabilidades</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <h4 class="font-semibold mt-2">🙋‍♀️🙋‍♂️ Del Voluntario/a:</h4>
+                            <ul class="list-disc list-inside space-y-1 mt-1">
+                                <li>Comprometerse con la misión y visión de Platohedro. ✨</li>
+                                <li>Firmar el acuerdo de voluntariado. 📝</li>
+                                <li>Cumplir con tareas y horarios acordados. ⏰</li>
+                                <li>Mantener comunicación fluida y respetuosa. 💬</li>
+                                <li>Participar en capacitaciones y seguimiento. 🎓</li>
+                                <li>Respetar la confidencialidad. 🔒</li>
+                                <li>Promover los valores de la cultura libre, #BuenConocer y #BuenVivir. 💖📚</li>
+                                <li>Informar impedimentos (ej. 24h antes). ⚠️</li>
+                                <li>Notificar cese de actividad (15 días antes). 👋</li>
+                                <li>Denunciar conductas contrarias a principios éticos. 🗣️</li>
+                                <li>**Cumplir políticas de protección infantil y juvenil (se facilitará enlace). 👶🛡️**</li>
+                            </ul>
+                            <h4 class="font-semibold mt-3">🏛️ De Platohedro:</h4>
+                            <ul class="list-disc list-inside space-y-1 mt-1">
+                                <li>Definir claramente roles y expectativas. 📝</li>
+                                <li>Firmar acuerdo de voluntariado. 🤝</li>
+                                <li>Proporcionar información, herramientas y recursos. 🧰</li>
+                                <li>Ofrecer ambiente seguro, respetuoso e inclusivo. 🛡️🤝</li>
+                                <li>Brindar capacitación y acompañamiento. 🧑‍🏫</li>
+                                <li>Reconocer y valorar la contribución. 👏</li>
+                                <li>Realizar seguimiento y evaluación periódica. 📊</li>
+                                <li>Garantizar protección de datos personales. 🔐</li>
+                                <li>Reconocer gastos asociados (sin ser remuneración). 💸</li>
+                                <li>Gestionar transición a rol remunerado (si aplica, según ley). 🔄</li>
+                                <li>Para menores de 18: solicitar consentimiento parental y aplicar políticas de protección infantil. 👨‍👩‍👧‍👦</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>🎨 Áreas de Voluntariado</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <p class="mt-2">Puedes sumar tu talento en diversas áreas. ¡Encuentra dónde encaja mejor tu pasión!</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">🎭 Producción y Gestión de Proyectos</h5>
+                                    <p class="text-sm">Apoyo en planificación, ejecución y evaluación de iniciativas artísticas, culturales y comunitarias.</p>
+                                </div>
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">✍️ Comunicación y Contenidos</h5>
+                                    <p class="text-sm">Creación de material gráfico, audiovisual, redacción para redes, web y difusión.</p>
+                                </div>
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">👩‍🏫 Pedagogías Alternativas</h5>
+                                    <p class="text-sm">Colaboración en talleres, encuentros y procesos formativos.</p>
+                                </div>
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">🔍 Investigación y Cultura Libre</h5>
+                                    <p class="text-sm">Apoyo en documentación, análisis y difusión de prácticas de conocimiento abierto.</p>
+                                </div>
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">🗓️ Logística y Eventos</h5>
+                                    <p class="text-sm">Asistencia en organización y desarrollo de encuentros, exposiciones y actividades.</p>
+                                </div>
+                                <div class="card p-4 rounded-md shadow">
+                                    <h5 class="font-semibold text-black">🗂️ Administración y Soporte</h5>
+                                    <p class="text-sm">Apoyo en tareas administrativas básicas o gestión de recursos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proceso" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-[#5dc1b9] mb-6 text-center">🔄 Modelo de Seguimiento del Voluntariado</h2>
+                <p class="text-center mb-6">Aseguramos una experiencia positiva y productiva, identificando fortalezas, mejoras y el impacto de tu labor.</p>
+
+                <div class="space-y-4">
+                    <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>⏳ Fases del Seguimiento</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <div class="relative mt-2">
+                                <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-[#5dc1b9] hidden sm:block"></div>
+                                
+                                <div class="step-item relative pl-10 sm:pl-12 py-3 border-l-4 sm:border-l-0 sm:border-transparent">
+                                    <div class="step-circle absolute left-0 top-3 sm:-left-1.5 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border-2 border-[#5dc1b9]">1</div>
+                                    <h5 class="step-title font-semibold text-black">👋 Inducción y Acogida (Primeras 2 semanas)</h5>
+                                    <p class="text-sm"><strong>Objetivo:</strong> Integrarte a Platohedro, familiarizarte con nuestra misión, visión, equipo y proyectos. 💖</p>
+                                    <p class="text-sm mt-1"><strong>Actividades:</strong> Reunión de bienvenida, presentación de la organización, entrega de material, definición de roles, asignación de mentor/a.</p>
+                                </div>
+                                <div class="step-item relative pl-10 sm:pl-12 py-3 border-l-4 sm:border-l-0 sm:border-transparent mt-4">
+                                    <div class="step-circle absolute left-0 top-3 sm:-left-1.5 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border-2 border-[#5dc1b9]">2</div>
+                                    <h5 class="step-title font-semibold text-black">🔄 Seguimiento Continuo (Semanal/Quincenal)</h5>
+                                    <p class="text-sm"><strong>Objetivo:</strong> Monitorear progreso, resolver dudas, brindar apoyo y retroalimentación. 🧐💡</p>
+                                    <p class="text-sm mt-1"><strong>Actividades:</strong> Reuniones de equipo, feedback informal, registro de actividades (opcional).</p>
+                                </div>
+                                <div class="step-item active relative pl-10 sm:pl-12 py-3 border-l-4 sm:border-l-0 sm:border-transparent mt-4">
+                                    <div class="step-circle absolute left-0 top-3 sm:-left-1.5 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border-2 border-[#5dc1b9]">3</div>
+                                    <h5 class="step-title font-semibold text-black">📊 Evaluación Periódica (Mensual)</h5>
+                                    <p class="text-sm"><strong>Objetivo:</strong> Evaluar desempeño, satisfacción e impacto de tu contribución. ✅🌟</p>
+                                    <p class="text-sm mt-1"><strong>Actividades:</strong> Entrevista de seguimiento (con preguntas clave para voluntario/a y coordinador/a), formulario de autoevaluación (opcional).</p>
+                                    <div class="mt-3 p-3 bg-[#f0f9f8] rounded-md border border-[#5dc1b9]">
+                                         <h4 class="text-3xl font-semibold mb-4 text-center">📝 Formulario de Informe Mensual</h4>
+                                        <p class="text-sm mb-3">Por favor completa este formulario al final de cada mes para documentar tus actividades y aprendizajes.</p>
+                                        <iframe src="https://app.youform.com/forms/lbcxwpkt" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                                    </div>
+                                </div>
+                                <div class="step-item relative pl-10 sm:pl-12 py-3 border-l-4 sm:border-l-0 sm:border-transparent mt-4">
+                                    <div class="step-circle absolute left-0 top-3 sm:-left-1.5 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border-2 border-[#5dc1b9]">4</div>
+                                    <h5 class="step-title font-semibold text-black">🎉 Cierre y Reconocimiento (Al finalizar)</h5>
+                                    <p class="text-sm"><strong>Objetivo:</strong> Agradecer tu aporte, formalizar cierre y mantener el vínculo. 🙏🫂</p>
+                                    <p class="text-sm mt-1"><strong>Actividades:</strong> Reunión de despedida, certificado de voluntariado (no laboral), carta de recomendación (si aplica), invitación a red de ex-voluntarios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div>
+                        <button class="accordion-header w-full text-left px-6 py-4 bg-[#8fe8e0] text-black font-semibold rounded-md flex justify-between items-center">
+                            <span>📊 Indicadores de Seguimiento</span>
+                            <span class="accordion-icon text-xl">➕</span>
+                        </button>
+                        <div class="accordion-content bg-white px-6 rounded-b-md">
+                            <p class="mt-2">Medimos la efectividad de nuestro programa a través de:</p>
+                            <ul class="list-disc list-inside space-y-1 mt-1">
+                                <li>👥 Número de voluntarios activos.</li>
+                                <li>⏰ Horas de voluntariado dedicadas.</li>
+                                <li>🔄 Tasa de retención.</li>
+                                <li>😊 Satisfacción del voluntario/a (encuestas/entrevistas).</li>
+                                <li>📈 Impacto en proyectos (logros específicos).</li>
+                                <li>👍 Feedback del equipo sobre la contribución voluntaria.</li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                   
+                </div>
+            </div>
+        </section>
+
+        <section id="participa" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 class="text-2xl font-semibold text-[#5dc1b9] mb-4">🤝 ¡Suma tu Energía a Platohedro!</h2>
+                <p class="mb-4 text-lg">
+                    Si te identificas con nuestra misión de fomentar el #BuenVivir y el #BuenConocer a través de la creatividad, la cultura libre y las pedagogías alternativas, ¡queremos conocerte!
+                </p>
+                <p class="mb-6">
+                    El voluntariado en Platohedro es una oportunidad para aprender, experimentar, compartir tus talentos y ser parte de una comunidad que cree en la transformación social desde la colaboración.
+                </p>
+                <div class="mb-6">
+                    <h4 class="font-semibold text-[#5dc1b9] mb-2">¿Cómo participar?</h4>
+                    <p>Actualmente, te invitamos a estar atento/a a nuestras convocatorias de voluntariado que publicamos en nuestras redes sociales y página web. Si tienes una propuesta específica o deseas más información, no dudes en contactarnos.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-[#5dc1b9] mb-2">Contacto:</h4>
+                    <p>📧 Email: <a href="mailto:info@platohedro.org" class="text-[#5dc1b9] hover:text-black underline">info@platohedro.org</a> (Ejemplo)</p>
+                    <p>🌐 Web: <a href="https://www.platohedro.org" target="_blank" class="text-[#5dc1b9] hover:text-black underline">www.platohedro.org</a> (Ejemplo)</p>
+                </div>
+                <button class="mt-8 bg-[#5dc1b9] hover:bg-[#8fe8e0] text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300">
+                    Ver Convocatorias (Próximamente)
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#8fe8e0] text-black py-8 text-center mt-12">
+        <p>&copy; <span id="currentYear"></span> Platohedro. Fomentando el #BuenVivir y #BuenConocer.</p>
+        <p class="text-sm">Este protocolo es un documento vivo y puede ser actualizado.</p>
+    </footer>
+
+    <script>
+        // Tab switching
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Function to show a specific tab
+        function showTab(tabId) {
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            tabContents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.remove('hidden');
+                    content.style.display = 'block'; // Explicitly ensure it's block
+                    document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
+                } else {
+                    content.classList.add('hidden');
+                    content.style.display = 'none'; // Explicitly ensure it's none
+                }
+            });
+            window.scrollTo({ top: document.querySelector('header').offsetHeight, behavior: 'smooth' });
+        }
+
+        // Add event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                showTab(targetTab);
+            });
+        });
+
+        // Accordion
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+                
+                // Close other open accordions within the same parent
+                const parentAccordions = header.closest('.space-y-4');
+                if (parentAccordions) {
+                    parentAccordions.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        if (openContent !== content) {
+                            openContent.classList.remove('open');
+                            openContent.previousElementSibling.querySelector('.accordion-icon').textContent = '➕';
+                        }
+                    });
+                }
+
+                content.classList.toggle('open');
+                if (content.classList.contains('open')) {
+                    icon.textContent = '➖';
+                } else {
+                    icon.textContent = '➕';
+                }
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Ensure the 'Inicio' tab is shown by default on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('inicio');
+        });
+    </script>
+
+</body>
+</html>
